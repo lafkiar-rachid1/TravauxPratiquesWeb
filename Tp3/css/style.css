@@ -1,0 +1,577 @@
+/* ===== Style Global - Site Vitrine TP3 ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ===========================
+   HEADER & NAVIGATION
+=========================== */
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: #3498db;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 7px 14px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #bdc3c7;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.hero a.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.hero a.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive hero image */
+.hero-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 40px;
+}
+
+/* ===========================
+   SECTIONS GÉNÉRIQUES
+=========================== */
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+section p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   CARDS (services, témoignages)
+=========================== */
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Témoignages */
+.temoignage {
+  background-color: white;
+  border-left: 4px solid #3498db;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 0 6px 6px 0;
+}
+
+.temoignage p {
+  font-style: italic;
+  color: #555;
+}
+
+.temoignage cite {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   FIGURE / FIGCAPTION (About)
+=========================== */
+
+.team {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.team figure {
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.team figure img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #2c3e50;
+  margin-bottom: 10px;
+}
+
+.team figure figcaption {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.team figure figcaption strong {
+  display: block;
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+/* ===========================
+   DETAILS / SUMMARY (Services)
+=========================== */
+
+details {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+}
+
+summary {
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  font-size: 1rem;
+  list-style: none;
+  padding: 5px 0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: '▶ ';
+  font-size: 0.85rem;
+  color: #3498db;
+}
+
+details[open] summary::before {
+  content: '▼ ';
+}
+
+details p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   TABLEAU DE TARIFS
+=========================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+thead th {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid #bdc3c7;
+}
+
+tbody td {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #444;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td:first-child {
+  text-align: left;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+tfoot td {
+  background-color: #ecf0f1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+}
+
+/* ===========================
+   GALERIE
+=========================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img,
+.gallery picture img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.gallery figcaption {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* ===========================
+   FORMULAIRE CONTACT
+=========================== */
+
+form {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 25px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+}
+
+legend {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  padding: 0 8px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="url"],
+input[list],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+  background-color: #fafafa;
+  margin-top: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2c3e50;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #2c3e50;
+}
+
+fieldset > label {
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #2c3e50;
+  margin-top: 6px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #3d5166;
+}
+
+/* Carte iframe */
+.map-container {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  display: block;
+}
+
+/* Infos contact */
+.contact-info {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 30px 40px 15px;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  color: #3498db;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-col ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.footer-col p {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #3d5166;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .team {
+    flex-direction: column;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

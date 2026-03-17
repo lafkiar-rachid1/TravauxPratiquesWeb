@@ -1,0 +1,201 @@
+/* ===== Style Simple - CV Rachid Lafkiar ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #bdc3c7;
+  margin-top: 4px;
+}
+
+/* === NAVIGATION === */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav ul li a:hover {
+  background-color: #3d5166;
+}
+
+/* === MAIN === */
+main {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* === SECTIONS === */
+section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* === À PROPOS === */
+#apropos img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #2c3e50;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+#apropos p {
+  color: #555;
+}
+
+#apropos::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* === COMPÉTENCES === */
+#competences ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#competences ul li {
+  background-color: #eaf0fb;
+  border: 1px solid #a9c1e8;
+  color: #2c3e50;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* === TABLE === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+thead th {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #444;
+}
+
+/* === CONTACT === */
+#contact ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: #2c3e50;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+#contact ul li a:hover {
+  background-color: #3d5166;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #2c3e50;
+  color: #bdc3c7;
+  font-size: 0.85rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #apropos img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  #apropos p {
+    text-align: center;
+  }
+
+  #contact ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
