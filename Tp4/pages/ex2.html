@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 2 - Box Model</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Exercice 2 - Box Model</h1>
+      <a class="back-link" href="../index.html">Retour au sommaire</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>2.1 Comprendre le Box Model</h2>
+<pre>.box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid #333;
+  margin: 15px;
+}</pre>
+      <ul>
+        <li><strong>content-box (défaut)</strong> : largeur visible = 300 + 40 + 10 = <strong>350px</strong></li>
+        <li><strong>border-box</strong> : largeur visible = <strong>300px</strong></li>
+      </ul>
+
+      <h3>Reset universel box-sizing</h3>
+<pre>*, *::before, *::after {
+  box-sizing: border-box;
+}</pre>
+    </section>
+
+    <section class="panel">
+      <h2>2.2 Centrer un élément</h2>
+      <p>Exemple de centrage horizontal (bloc de 600px) puis vertical + horizontal dans la page :</p>
+<pre>.center-horizontal {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.center-both {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</pre>
+
+      <div class="demo-box" style="display:flex; justify-content:center; align-items:center; min-height:260px;">
+        <div style="width:600px; max-width:100%; border:1px solid #dbe1ea; padding:1rem; border-radius:8px; background:#fff; text-align:center;">
+          Élément centré horizontalement et verticalement
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

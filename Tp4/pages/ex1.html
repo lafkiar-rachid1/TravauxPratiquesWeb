@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 1 - Sélecteurs et spécificité</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Exercice 1 - Sélecteurs et spécificité</h1>
+      <a class="back-link" href="../index.html">Retour au sommaire</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>1.1 Sélecteurs</h2>
+      <p>HTML de référence :</p>
+<pre>&lt;nav class="main-nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/" class="active"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+  &lt;article class="post featured"&gt;
+    &lt;h2&gt;Premier article&lt;/h2&gt;
+    &lt;p&gt;Contenu...&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article class="post"&gt;
+    &lt;h2&gt;Deuxième article&lt;/h2&gt;
+    &lt;p&gt;Contenu...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</pre>
+
+      <table class="table">
+        <thead>
+          <tr><th>Demande</th><th>Sélecteur CSS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tous les liens dans la navigation</td><td><code>.main-nav a</code></td></tr>
+          <tr><td>Uniquement le lien actif</td><td><code>.main-nav a.active</code></td></tr>
+          <tr><td>L'article ayant la classe featured</td><td><code>article.post.featured</code></td></tr>
+          <tr><td>Premier paragraphe de chaque article</td><td><code>article.post p:first-of-type</code></td></tr>
+          <tr><td>Éléments li pairs</td><td><code>.main-nav li:nth-child(even)</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>1.2 Spécificité</h2>
+      <h3>Classement par spécificité croissante</h3>
+      <ol>
+        <li><code>p</code> (0,0,0,1)</li>
+        <li><code>.text</code> (0,0,1,0)</li>
+        <li><code>p.text</code> (0,0,1,1)</li>
+        <li><code>#main</code> (0,1,0,0)</li>
+        <li><code>#main .text p</code> (0,1,1,1)</li>
+      </ol>
+
+      <h3>Questions théoriques</h3>
+      <ul>
+        <li>Si deux règles ont la même spécificité, la règle écrite en dernier dans la feuille CSS gagne.</li>
+        <li>Il faut éviter <code>!important</code> car il rend la maintenance difficile, casse la cascade naturelle et crée des conflits de priorité.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

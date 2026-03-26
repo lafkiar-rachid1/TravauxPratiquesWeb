@@ -1,0 +1,468 @@
+:root {
+  --bg: #eef2f8;
+  --bg-soft: #f8faff;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #5f6b82;
+  --border: #d6deea;
+  --primary: #114b7a;
+  --primary-dark: #0a3558;
+  --accent: #0f8a7f;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.07);
+  --shadow-card: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 10% 0%, #f7faff 0%, transparent 40%),
+    radial-gradient(circle at 90% 20%, #edf4ff 0%, transparent 35%);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(120deg, #0d3f68, #135486 60%, #1a659f);
+  color: #fff;
+  padding: 2.3rem 0;
+  box-shadow: var(--shadow-soft);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  letter-spacing: 0.2px;
+}
+
+.site-header p {
+  margin: 0.55rem 0 0;
+  color: #dceeff;
+  max-width: 75ch;
+}
+
+.site-footer {
+  margin-top: 2.4rem;
+  padding: 1.2rem 0 1.4rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 1.35rem;
+  margin-top: 1.25rem;
+}
+
+.exercise-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.95rem;
+}
+
+.exercise-nav a,
+.back-link,
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #1b669f);
+  padding: 0.68rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exercise-nav a:hover,
+.back-link:hover,
+.button-link:hover {
+  background: linear-gradient(135deg, var(--primary-dark), #114b7a);
+  transform: translateY(-1px) scale(1.003);
+  box-shadow: 0 10px 18px rgba(15, 75, 122, 0.24);
+}
+
+.back-link {
+  margin-top: 0.9rem;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 1.5vw, 1.55rem);
+  margin-bottom: 0.65rem;
+}
+
+h3 {
+  font-size: clamp(1.03rem, 1.2vw, 1.2rem);
+  margin-bottom: 0.5rem;
+}
+
+p,
+li {
+  color: #243046;
+}
+
+code,
+pre {
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+pre {
+  background: #0f172a;
+  color: #dce8ff;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #1f2d4a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border);
+  padding: 0.65rem;
+  text-align: left;
+}
+
+.table th {
+  background: #f4f8ff;
+  color: #1a2f4b;
+}
+
+.table tr:nth-child(even) td {
+  background: #fbfdff;
+}
+
+.demo-box {
+  border: 1px dashed #b3bfce;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fcfdff, #f8fbff);
+}
+
+.note {
+  padding: 0.78rem;
+  border-left: 4px solid var(--accent);
+  background: #eefaf8;
+  border-radius: 8px;
+}
+
+/* Exercice 3 - Navigation Flexbox */
+.navbar-demo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #172a44);
+  color: #fff;
+  padding: 0.78rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #24324b;
+}
+
+.navbar-demo .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-demo a {
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Exercice 3 - Cartes */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.card-link {
+  margin-top: auto;
+  align-self: flex-start;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--accent), #14a39a);
+  color: #fff;
+  padding: 0.52rem 0.86rem;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+/* Exercice 4 - Grid */
+.grid-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid-cards .card {
+  text-align: center;
+  font-weight: 600;
+}
+
+.page-layout {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+}
+
+.page-layout > * {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.page-layout .header {
+  grid-area: header;
+}
+
+.page-layout .sidebar {
+  grid-area: sidebar;
+}
+
+.page-layout .main {
+  grid-area: main;
+}
+
+.page-layout .footer {
+  grid-area: footer;
+}
+
+@media (min-width: 900px) {
+  .page-layout {
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+}
+
+/* Exercice 5 - Mobile First */
+.responsive-demo .container {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.responsive-demo .nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.responsive-demo .nav-item {
+  background: #f5f9ff;
+  border: 1px solid var(--border);
+  padding: 0.55rem;
+  border-radius: 8px;
+}
+
+.responsive-demo .content {
+  display: block;
+  margin-top: 0.7rem;
+}
+
+.responsive-demo .main-content {
+  background: #f8fbff;
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.responsive-demo .sidebar {
+  display: none;
+  background: #f2f8ff;
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .responsive-demo .nav-menu {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .responsive-demo .content {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 10px;
+  }
+
+  .responsive-demo .sidebar {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-demo .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .responsive-demo .content {
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* Exercice 6 - Thèmes */
+.theme-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.theme-card {
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.theme-light {
+  --bg-theme: #ffffff;
+  --text-theme: #1f2937;
+  --primary-theme: #2563eb;
+  background: var(--bg-theme);
+  color: var(--text-theme);
+  border: 1px solid #dbeafe;
+}
+
+.theme-dark {
+  --bg-theme: #111827;
+  --text-theme: #f9fafb;
+  --primary-theme: #60a5fa;
+  background: var(--bg-theme);
+  color: var(--text-theme);
+  border: 1px solid #1f2937;
+}
+
+.theme-card a {
+  color: var(--primary-theme);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Exercice 7 - Animations */
+.animated-btn {
+  background: linear-gradient(135deg, var(--primary), #1a659f);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.animated-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark), #0f4c81);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 18px rgba(15, 76, 129, 0.25);
+}
+
+.spinner {
+  width: 52px;
+  height: 52px;
+  border: 6px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.quiz-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.answer {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 1.7rem 0;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .exercise-nav {
+    grid-template-columns: 1fr;
+  }
+}
