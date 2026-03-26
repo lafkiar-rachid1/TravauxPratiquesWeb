@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 3 - Flexbox</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Exercice 3 - Flexbox</h1>
+      <a class="back-link" href="../index.html">Retour au sommaire</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>3.1 Barre de navigation</h2>
+<pre>.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</pre>
+      <nav class="navbar-demo">
+        <div class="logo">MonSite</div>
+        <ul class="nav-links">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="panel">
+      <h2>3.2 Cartes de même hauteur</h2>
+<pre>.cards { display: flex; gap: 1rem; }
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-link { margin-top: auto; }</pre>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Carte 1</h3>
+          <p>Contenu court.</p>
+          <a href="#" class="card-link">En savoir plus</a>
+        </div>
+        <div class="card">
+          <h3>Carte 2</h3>
+          <p>Contenu beaucoup plus long pour tester l'alignement vertical des boutons.</p>
+          <a href="#" class="card-link">En savoir plus</a>
+        </div>
+        <div class="card">
+          <h3>Carte 3</h3>
+          <p>Contenu moyen.</p>
+          <a href="#" class="card-link">En savoir plus</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
