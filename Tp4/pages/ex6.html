@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 6 - Variables CSS et thèmes</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Exercice 6 - Variables CSS et thèmes</h1>
+      <a class="back-link" href="../index.html">Retour au sommaire</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>6.1 Système de couleurs</h2>
+<pre>:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --primary: #2563eb;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --text: #f9fafb;
+  --primary: #60a5fa;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}</pre>
+
+      <div class="theme-preview">
+        <article class="theme-card theme-light">
+          <h3>Thème clair</h3>
+          <p>Fond clair, texte foncé, couleur primaire bleue.</p>
+          <a href="#">Lien d'exemple</a>
+        </article>
+        <article class="theme-card theme-dark">
+          <h3>Thème sombre</h3>
+          <p>Fond sombre, texte clair, contraste adapté.</p>
+          <a href="#">Lien d'exemple</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
