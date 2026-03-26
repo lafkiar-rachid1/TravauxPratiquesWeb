@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 7 - Transitions et animations</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Exercice 7 - Transitions et animations</h1>
+      <a class="back-link" href="../index.html">Retour au sommaire</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>7.1 Bouton animé</h2>
+<pre>.animated-btn {
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.animated-btn:hover {
+  transform: translateY(-2px) scale(1.01);
+}</pre>
+      <button class="animated-btn" type="button">Valider</button>
+    </section>
+
+    <section class="panel">
+      <h2>7.2 Animation de chargement</h2>
+<pre>.spinner {
+  width: 52px;
+  height: 52px;
+  border: 6px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}</pre>
+      <div class="spinner" aria-label="Chargement en cours"></div>
+    </section>
+  </main>
+</body>
+</html>
