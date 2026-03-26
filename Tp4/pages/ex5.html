@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 5 - Responsive Design</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Exercice 5 - Responsive Design</h1>
+      <a class="back-link" href="../index.html">Retour au sommaire</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>5.1 Mobile First</h2>
+      <p>Base mobile + media queries tablette et desktop avec <code>min-width</code>.</p>
+<pre>/* Base mobile */
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.content {
+  display: block;
+}
+
+.sidebar {
+  display: none;
+}
+
+/* Tablette */
+@media (min-width: 768px) {
+  .nav-menu { flex-direction: row; }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 10px;
+  }
+  .sidebar { display: block; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .content {
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+  }
+}</pre>
+
+      <div class="responsive-demo">
+        <div class="container">
+          <div class="nav-menu">
+            <div class="nav-item">Accueil</div>
+            <div class="nav-item">Services</div>
+            <div class="nav-item">Contact</div>
+          </div>
+          <div class="content">
+            <div class="main-content">Zone principale de contenu</div>
+            <aside class="sidebar">Sidebar affichée dès la tablette</aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
